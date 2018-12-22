@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PersonINFO</title>
+    <style>
+        .outer{
+            width: 80%;
+            height: 40%;
+            background-color: darkslategray;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .inner{
+            width: 40%;
+            height: 20%;
+            background-color: bisque;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        div div .subform{
+            width: 60px;
+            display: block;
+
+            margin-right: 10px;
+            position: absolute;
+            right: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <div    class="outer">
+    <div class="inner">
+        <p>账号:<input type="text" name="UID"></p>
+        <p>密码:<input type="text" name="pwd"></p>
+            <p>语言:  <input type="checkbox" name="lang" id="1">English
+                      <input type="checkbox" name="lang" id="2">中文
+                      <input type="checkbox" name="lang" id="3">韩文
+
+            </p>
+        <p><input class="subform" type="submit" value="提交"></p>
+
+    </div>
+
+</div>
+
+</form>
+
+
+</body>
+</html>

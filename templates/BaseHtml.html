@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Base</title>
+    {% endblock %}
+    <style>
+        *{
+            text-decoration: none;
+        }
+
+        .container{
+            width: 100%;
+            height: 60px;
+            background-color: lightcyan;
+            position: relative;
+        }
+        .header {
+            float: left;
+            width: 90%;
+            height: 60px;
+            margin-left: 5%;
+            background-color: antiquewhite;
+        }
+        .web_image {
+            width: 160px;
+            height: 60px;
+            display: inline-block;
+            float: left;
+        }
+
+        .person_block{
+            font-size: 12px;
+            text-align: center;
+            float:right;
+            width: 40px;
+            background-color: aquamarine;
+            border: black solid;
+            display: block;
+            float: right;
+        }
+        .nav .nav_tag{
+            width: 80px;
+            height: 40px;
+            margin: 20px 10px 0px 10px  ;
+            font-size: large;
+            text-decoration: none;
+
+
+
+
+
+            background-color: aquamarine;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            border-top: cornsilk;
+
+        }
+
+        .main {
+            width: 100%;
+            background-color: cadetblue;
+            height: 640px;
+
+
+
+
+        }
+        .main .main_left{
+            width: 20%;
+            height: 500px;
+            float: left;
+            background-color: darkgoldenrod;
+            display: inline;
+        }
+        .main .main_right{
+            width: 80%;
+            height: 500px;
+            float: right;
+            background-color: floralwhite;
+            display: inline;
+        }
+
+        .main .main_left li{
+            width: 90%;
+            height:20px;
+            border: black solid;
+            text-align: center;
+            line-height: 20px;
+            padding: 10px 10px 10px  ;
+        }
+
+
+
+        {% block style %}
+
+
+        {% endblock %}
+    </style>
+</head>
+<body>
+<div class=" container">
+    <div class="header">
+        <span   class="head_img">
+            <a class="head_pic" href="\index"><img class="web_image" src="/static/ref_img/DongWebSite.png" alt=""></a>
+        </span>
+
+        <div class="nav">
+            <div class="nav_tag PLC"><a href="\lesson_PLC\">PLC</a></div>
+            <div class="nav_tag Robot"><a href="">Robot</a></div>
+            <div class="nav_tag CIM"><a href="">CIM</a></div>
+            <div class="nav_tag C#"><a href="">C#</a></div>
+            <div class="nav_tag Python"><a href="">Python</a></div>
+            <div class="nav_tag Web"><a href="">Web</a></div>
+            <div class="nav_tag MyLesson"><a href="\Learn\MyLesson">MyLesson</a></div>
+        </div>
+
+        <div class="head_img"></div>
+        <div class="person_block">
+            <div class="person_block login"><a href="\Learn\SignIn\">Hello {{ inUID }}</a></div>
+            <div class="person_block signup none_login"><a href="\Learn\SignUp\">注册</a></div>
+            <div class="person_block signin none_login"><a href="\Learn\SignIn\">登录</a></div>
+        </div>
+
+    </div>
+</div>
+ <div class="main">
+        <div class="main_left">
+            <li>
+                <span><a href="">2</a></span>                            </li>
+            <li>
+                <span><a href="">3</a></span>
+            </li>
+            <li>
+                <span><a href="">4</a></span>
+            </li>
+            <li>
+                <span><a href="">4</a></span>
+            </li>
+            <li>
+                <span><a href="">4</a></span>
+            </li>
+
+        </div>
+        <div class="main_right">
+        {% block context %}
+        Welcom to Homepage
+
+
+        {% endblock %}
+        </div>
+        <div class="main_down"></div>
+ </div>
+</body>
+<script scr="\static\jquery-3.1.1.js"></script>
+<script>
+
+
+
+</script>
+</html>

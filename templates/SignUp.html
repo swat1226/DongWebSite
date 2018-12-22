@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PersonINFO</title>
+    <style>
+        .outer{
+            width: 80%;
+            height: 40%;
+            background-color: darkslategray;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .inner{
+            width: 40%;
+            height: 20%;
+            background-color: bisque;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        div div .subform{
+            width: 60px;
+            display: block;
+
+            margin-right: 10px;
+            position: absolute;
+            right: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <div    class="outer">
+    <div class="inner">
+        <p>LogID:   <input class="typein" type="text" name="iUID"  placeholder="工号"></p>
+        <p>Password:    <input class="typein" type="password" name="pwd" placeholder="密码"></p>
+        <p>Name:    <input class="typein" type="text" name="name" placeholder="昵称"></p>
+        <p>Gender:  <input type="radio" name="gender" value="1" >男 <input type="radio" name="gender" value="0"></input>女</p>
+        <p>Tel:    <input class="typein" type="number" name="tel" placeholder="电话"></p>
+        <p>E-mail:    <input class="typein" type="text" name="email" placeholder="邮箱"></p>
+        <p>Birth Day:    <input class="typein" type="text" name="birth" placeholder="1990-12-26"></p>
+        <p>Join Day:    <input type="date" name="join_day"></p>
+
+             <span>* 点击“提交” 按钮，即表示您同意并愿意遵守本网站的</span><a href="">用户协议</a>。
+
+            </p>
+        <p><input class="subform" type="submit" value="提交"></p>
+    </div>
+</div>
+{% csrf_token %}
+</form>
+
+<script src="\static\jquery-3.1.1.js"></script>
+<script>
+    $('.typein').click(function () {
+        this.value="";
+    })
+
+
+
+</script>
+</body>
+</html>
